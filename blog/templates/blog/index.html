@@ -1,9 +1,51 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}
     Technically Speaking
 {% endblock %}
+{% block css_files %}
+    <link rel="stylesheet" href="{% static 'blog/index.css' %}">
+{% endblock %}
 
 {% block content %}
-<h1>Technically Speaking</h1>
+    <header id="main-navigation">
+        <h1><a href=""> Technically Speaking 🧑🏻‍💻</a></h1>
+        <nav>
+            <a href="">All Posts</a>
+        </nav>
+    </header>
+
+    <section id="welcome">
+        <header>
+            <img src="soon" alt="Technically Speaking Logo">
+            <h2>Technically Speaking</h2>
+        </header>
+        <p>Technically Speaking is a blog about technology, programming, and the web. It's a place for me to share my
+            thoughts and ideas about the things I'm learning and working on.</p>
+    </section>
+
+    <section id="latest-posts">
+        <h2>My Latest Thoughts</h2>
+        <ul>
+            <li>
+                <article class="post">
+                    <a href="">
+                        <img src="" alt="Placeholder Image">
+                        <div class="post__content">
+                            <h3>Placeholder Title</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa ipsum labore
+                                quia, quidem quis repellat vel. Aut blanditiis distinctio, earum et illo nesciunt odit
+                                officia quae ratione repellat?</p>
+                        </div>
+                    </a>
+                </article>
+            </li>
+        </ul>
+    </section>
+
+    <section id="about">
+        <h2> What do I do?</h2>
+        <p>I love programming, I love to help others and I enjoy exploring new technologies in general</p>
+        <p>My goal is to keep on growing as a developer and if I could help you do the same, I'd be very happy!</p>
+    </section>
 {% endblock %}
