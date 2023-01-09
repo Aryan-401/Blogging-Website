@@ -1,13 +1,11 @@
 {% load static %}
 <li>
     <article class="post">
-        <a href="{% url "post-detail-page" slug="the-mountains" %}">
-            <img src="{% static "blog/images/mountains.jpg" %}" alt="Placeholder Image" id="">
+        <a href="{% url "post-detail-page" slug=post.slug %}">
+            <img src="{% static "blog/images/"|add:post.image %}" alt={{ post.title }} id="">
             <div class="post__content">
-                <h3>Placeholder Title</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem debitis ipsa ipsum labore
-                    quia, quidem quis repellat vel. Aut blanditiis distinctio, earum et illo nesciunt odit
-                    officia quae ratione repellat?</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.excerpt }}</p>
             </div>
         </a>
     </article>
