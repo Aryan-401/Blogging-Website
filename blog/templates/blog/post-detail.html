@@ -13,11 +13,11 @@
             {{  post.title }}
         </h2>
         <article>
-            <img src="{% static "blog/images/"|add:post.image %}" alt="">
+            <img src="{% static "blog/images/"|add:post.image_name %}" alt="">
             <address>By: {{ post.author|title }}</address>
             <div>
                 Last Updated:
-                <time>post.date|date: "d M Y"</time>
+                <time>{{post.date}}</time>  {# |date: 'd-M-Y' #}
             </div>
         </article>
 
