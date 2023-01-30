@@ -13,6 +13,7 @@ delete posts.
 - [License](#license)
 
 # Features
+- Create, Read, Update and Delete posts
 
 
 ## Running the Bot Locally
